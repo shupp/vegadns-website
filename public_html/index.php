@@ -49,8 +49,8 @@ VegaDNS is a <a href="http://cr.yp.to/djbdns/tinydns.html">tinydns</a> administr
 
 <b>Download</b>
 <ul>
-    <li>Download <a href="https://github.com/shupp/VegaDNS/zipball/<?php echo $current ?>">current version</a> (<?php echo $current ?>)</li>
-    <li>All <a href="https://github.com/shupp/VegaDNS/archives/master">downloads</a></li>
+    <li>Zip<a href="https://github.com/shupp/VegaDNS/zipball/<?php echo $current ?>">current version</a> (<?php echo $current ?>)</li>
+    <li>Git<a href="https://github.com/shupp/VegaDNS/">downloads</a>master</li>
 </ul>
 
 <b>Documentation</b>
