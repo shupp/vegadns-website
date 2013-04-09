@@ -1,5 +1,5 @@
 <?php
-$current = '0.11.3';
+$current = '0.12.0';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
             "http://www.w3.org/TR/html4/loose.dtd">
@@ -39,7 +39,7 @@ VegaDNS is a <a href="http://cr.yp.to/djbdns/tinydns.html">tinydns</a> administr
 <b>Requirements</b>
 
 <ul>
-    <li> PHP 4 (Requires register_globals to be Off for security, as well as safe_mode off for shell_exec())</li>
+    <li> PHP 5.1</li>
     <li> MySQL</li>
     <li> djbdns (<a href="http://cr.yp.to/djbdns.html">http://cr.yp.to/djbdns.html</a>)</li>
     <li> ucspi-tcp (<a href="http://cr.yp.to/ucspi-tcp.html">http://cr.yp.to/ucspi-tcp.html</a>)</li>
