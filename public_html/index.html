@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>VegaDNS</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/vegadns.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-offset-4 col-md-4">
+                    <img src="images/vegadns-logo.png" class="vegadns-logo">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">A tinydns administration tool for managing authoritative DNS records.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-bg">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Overview</h3>
+                <hr>
+                <h4>VegaDNS 2, the successor to <a href="https://github.com/shupp/VegaDNS">VegaDNS</a>, is now available.  It is broken into three main componenents:</h4>
+                <ul>
+                    <li>
+                        <strong><a href="https://github.com/shupp/VegaDNS-API">VegaDNS-API</a></strong> - Written in python, is a REST API that relies on <a href="http://flask.pocoo.org/">flask</a>, <a href="https://flask-restful.readthedocs.org/en/0.3.4/">flask_restful</a>, and <a href="http://peewee.readthedocs.org/en/latest/">peewee</a>. It generally is run using <a href="https://uwsgi-docs.readthedocs.org/en/latest/">uwsgi</a> and <a href="http://supervisord.org/">supervisor</a> behind <a href="http://nginx.org/">nginx</a>.
+                    </li>
+                    <li>
+                        <strong><a href="https://github.com/shupp/VegaDNS-UI">VegaDNS-UI</a></strong> - a JavaScript only UI, similar to the old VegaDNS.
+                    </li>
+                    <li>
+                        <strong><a href="https://github.com/shupp/VegaDNS-CLI">VegaDNS-CLI</a></strong> - a command line interface written in python.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Features</h3>
+                <hr>
+                <ul>
+                    <li>
+                        <strong>Group based permissions</strong> - There are two types of accounts, <em>senior_admin</em> and <em>user</em>. Accounts of type <em>User</em> be added to groups, can own domains, and privileges (read/edit/delete) can now be granted domains mapped to groups. This provides a flexible architecture for distributing permissions to users.
+                    </li>
+                    <li>
+                        <strong>Location support</strong> - Tinydns location support is now available (aka "Split Horizon").
+                    </li>
+                    <li>
+                        <strong>Authentication</strong> - VegaDNS now supports basic auth, cookies, and <a href="https://tools.ietf.org/html/rfc6749#section-4.4">OAuth2 (section 4.4)</a> for authentication.
+                    </li>
+                    <li>
+                        <strong>Improved Search</strong> - Real time search is now the standard, and for records you can search by record name or value.
+                    </li>
+                    <li>
+                        <strong>Python and JS Clients</strong> - Both VegaDNS-CLI and VegaDNS-UI have API clients that can be used for custom integrations. (<a href="https://github.com/shupp/VegaDNS-CLI/tree/master/vegadns_client">python client</a>, <a href="https://github.com/shupp/VegaDNS-UI/blob/master/public/js/utils/VegaDNSClient.js">javascript client</a>)
+                    </li>
+                    <li>
+                        <strong>Docker Support</strong> - A Dockerfile is included if you prefer to run it under docker.  See the <a href="https://github.com/shupp/VegaDNS-API/blob/master/README.md#setup-using-docker">README</a> for details.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Support</h3>
+                <hr>
+                <ul>
+                    <li>Please use github for reporting issues or pull requests.</li>
+                    <li>You may also join the discussion on the <a href="http://groups.google.com/group/vegadns">Google Group</a>.</li>
+                    <li>Watch for updates on twitter at <a href="https://twitter.com/vegadns">@vegadns</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Legacy Version (0.13.3 and earlier)</h3>
+                <hr>
+                <ul>
+                    <li>The legacy version of VegaDNS can be found on github <a href="https://github.com/shupp/VegaDNS">here</a> and the old website <a href="0.13/">here</a>.
+                    <li><strong>Upgrading</strong> - VegaDNS 2 should be treated as a new installation (VegaDNS-API + VegaDNS-UI), but you can upgrade your existing database to use with it.  See <a href="https://github.com/shupp/VegaDNS-API#installation">installation</a> in the API docs for notes on upgrading your database.  (Back up your data and test first!)
+                </ul>
+            </div>
+        </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
