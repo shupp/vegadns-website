@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('America/Los_Angeles');
 $current = '0.13.3';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -16,6 +17,9 @@ $current = '0.13.3';
 
 </head>
 <body background="images/background.gif">
+<center>
+    <h1>The VegaDNS 0.13.x series has been deprecated in favor of <a href="/">VegaDNS 2</a></h1>
+</center>
 <font size=-1>Last modified: <?php echo strftime("%b %d, %Y %H:%M", filemtime("index.php"))?></font><br />
 
 <center>
